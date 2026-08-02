@@ -54,7 +54,7 @@ type CompletionResponse struct {
 // generated text choice.
 func (c *Client) Complete(ctx context.Context, prompt string) (string, error) {
 	body, err := json.Marshal(CompletionRequest{
-		Model:       "text-davinci-003",
+		Model:       "gpt-3.5-turbo-instruct",
 		Prompt:      prompt,
 		MaxTokens:   256,
 		Temperature: 0.3,
